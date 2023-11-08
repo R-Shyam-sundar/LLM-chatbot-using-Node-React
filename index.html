@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chatbot</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        #chat-container {
+            width: 80%;
+            max-width: 800px; /* Adjust the max-width as needed */
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        .message-container {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .message-bubble {
+            padding: 10px;
+            border-radius: 10px;
+            margin: 5px;
+            max-width: 70%;
+        }
+        .human-bubble {
+            background-color: #00bcd4;
+            color: #fff;
+            align-self: flex-start;
+        }
+        .ai-bubble {
+            background-color: #f0f0f0;
+            color: #000;
+            align-self: flex-end;
+        }
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 1px solid #ddd;
+        }
+        #submit-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 0 0 10px 10px;
+            cursor: pointer;
+        }
+        #submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div class="message-container">
+            <div class="message-bubble human-bubble">Hello! This is a sample message from the user.</div>
+        </div>
+        <div class="message-container">
+            <div class="message-bubble ai-bubble">This is a sample response from the chatbot.</div>
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message here">
+        <button id="submit-button">Submit</button>
+    </div>
+    <script src="chatbot.js"></script>
+</body>
+</html>
